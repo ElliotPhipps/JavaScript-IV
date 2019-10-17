@@ -49,7 +49,12 @@ class Student extends Person{
     }
     //methods: `listsSubjects` a method that logs out all of the student's favoriteSubjects one by one. `PRAssignment` a method that receives a subject as an argument and logs out that the `student.name has submitted a PR for {subject}`, `sprintChallenge` similar to PRAssignment but logs out `student.name has begun sprint challenge on {subject}`
     listsSubjects(){
-        this.favSubjects.forEach(element => {console.log(element)})
+        
+        this.favSubjects.forEach(function(favSubjects) {
+            console.log(favSubjects);
+        });
+        
+        return `My favorite subjects are ${this.favSubjects}.`;
     }
     PRAssignment(subject = 'JavaScript'){
         return `${this.name} has submitted a PR for ${subject}.`
