@@ -53,8 +53,6 @@ class Student extends Person{
         this.favSubjects.forEach(function(favSubjects) {
             console.log(favSubjects);
         });
-        
-        return `My favorite subjects are ${this.favSubjects}.`;
     }
     PRAssignment(subject = 'JavaScript'){
         return `${this.name} has submitted a PR for ${subject}.`
@@ -179,7 +177,7 @@ const Bartholemew = new ProjectManager({
 
 console.log(Brit.demo());
 console.log(Brit.grade());
-console.log(Elliot.listsSubjects());
+Elliot.listsSubjects();
 console.log(Elliot.PRAssignment());
 console.log(Elliot.sprintChallenge());
 console.log(Tim.standUp());
